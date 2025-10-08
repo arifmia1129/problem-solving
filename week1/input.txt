@@ -1,1 +1,11 @@
-11 15
+10
+only
+if
+these
+oddindexed
+words
+appear
+are
+you
+correct
+output
