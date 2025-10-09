@@ -4,6 +4,8 @@
     "*.embeddedhtml": "html",
     "iostream": "cpp",
     "vector": "cpp",
-    "ios": "cpp"
+    "ios": "cpp",
+    "queue": "cpp",
+    "set": "cpp"
   }
 }
