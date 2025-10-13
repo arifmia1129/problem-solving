@@ -1,0 +1,4 @@
+3
+arif 10 a
+binu 20 b
+ariba 30 c
