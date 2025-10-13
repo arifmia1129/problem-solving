@@ -6,6 +6,7 @@
     "vector": "cpp",
     "ios": "cpp",
     "queue": "cpp",
-    "set": "cpp"
+    "set": "cpp",
+    "ostream": "cpp"
   }
 }
