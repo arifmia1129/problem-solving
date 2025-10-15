@@ -1,4 +1,2 @@
-3
-arif 10 a
-binu 20 b
-ariba 30 c
+6
+1 2 3 4 5 6
