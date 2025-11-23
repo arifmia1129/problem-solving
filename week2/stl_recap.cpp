@@ -115,13 +115,31 @@ int main () {
 
     // cout << '\n';
 
-    string s; cin >> s;
+    // string s; cin >> s;
 
-    cout << s.front() << '\n';
-    cout << s.back() << '\n';
-    cout << s.size() << '\n';
+    // cout << s.front() << '\n';
+    // cout << s.back() << '\n';
+    // cout << s.size() << '\n';
 
-    cout << s.substr(0, 3) << '\n';
+    // cout << s.substr(0, 3) << '\n';
+
+    // int n, m; cin >> n >> m;
+
+    // vector<vector<int>> v(n, vector<int>(m));
+
+    // for(int i = 0; i < n; i++) {
+    //     for(int j = 0; j < m; j++) {
+    //         cin >> v[i][j];
+    //     }
+    // }
+
+    // for(int i = 0; i < n; i++) {
+    //     for(int j = 0; j < m; j++) {
+    //         cout << v[i][j] << " ";
+    //     }
+
+    //     cout << '\n';
+    // }
     
     return 0;
 }
