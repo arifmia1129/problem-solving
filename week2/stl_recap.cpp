@@ -90,30 +90,38 @@ int main () {
     // }
     // cout << "\n";
 
-    int n; cin >> n;
+    // int n; cin >> n;
 
-    deque<int> dq(n);
+    // deque<int> dq(n);
 
-    for(int i = 0; i < n; i++) {
-        cin >> dq[i];
-    }
+    // for(int i = 0; i < n; i++) {
+    //     cin >> dq[i];
+    // }
 
-    dq.push_front(1);
-    dq.push_front(9);
+    // dq.push_front(1);
+    // dq.push_front(9);
 
-    for(int i = 0; i < n; i++) {
-        cout << dq[i] << " ";
-    }
+    // for(int i = 0; i < n; i++) {
+    //     cout << dq[i] << " ";
+    // }
 
-    cout << '\n';
+    // cout << '\n';
 
-    dq.pop_front();
+    // dq.pop_front();
 
-    for(int i = 0; i < n; i++) {
-        cout << dq[i] << " ";
-    }
+    // for(int i = 0; i < n; i++) {
+    //     cout << dq[i] << " ";
+    // }
 
-    cout << '\n';
+    // cout << '\n';
+
+    string s; cin >> s;
+
+    cout << s.front() << '\n';
+    cout << s.back() << '\n';
+    cout << s.size() << '\n';
+
+    cout << s.substr(0, 3) << '\n';
     
     return 0;
 }
