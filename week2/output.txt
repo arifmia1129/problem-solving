@@ -1,3 +1,10 @@
-ariba 1 female
-arif 2 male
-binu 3 female
+7
+9
+3
+8
+Front ->  7
+Back ->  8
+Is empty -> 0
+Min: 3 Max: 9
+Max element position: 1
+7 9 3 8 

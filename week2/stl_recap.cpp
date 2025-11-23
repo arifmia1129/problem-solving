@@ -51,6 +51,44 @@ int main () {
     //     cout << x << " " << y << " " << z << "\n";
     // }
 
+    vector<int> v;
+
+    int n; cin >> n;
+
+    for(int i = 0; i < n; i++) {
+        int x; cin >> x;
+        v.push_back(x);
+    }
+
+    v.pop_back();
+
+    for(int i = 0; i < v.size(); i++) {
+        cout << v[i] << "\n";
+    }
+
+    cout << "Front -> " << " " << v.front() << "\n";
+    cout << "Back -> " << " " << v.back() << "\n";
+
+    // v.clear();
+
+    cout << "Is empty -> " << v.empty() << "\n";
+
+    // reverse(v.begin(), v.end());
+    // sort(v.begin(), v.end(), greater<int>());
+
+    auto mn = min_element(v.begin(), v.end());
+    auto mx = max_element(v.begin(), v.end());
+
+    cout << "Min: " << *mn << " " << "Max: " << *mx << endl;
+
+    auto idx = mx - v.begin();
+
+    cout << "Max element position: " << idx << endl;
+
+    for(auto it = v.begin(); it != v.end(); it++) {
+        cout << *it << " ";
+    }
+    cout << "\n";
     
     return 0;
 }
