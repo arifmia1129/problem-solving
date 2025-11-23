@@ -140,6 +140,34 @@ int main () {
 
     //     cout << '\n';
     // }
+
+    map<int, int> mp;
+
+    mp[10] = 2;
+    mp[20] = 3;
+    mp[30] = 4;
+
+    for(auto[key, value] : mp) {
+        cout << key << " -> " << value << '\n';
+    }
+    cout << '\n';
+    // auto it = mp.find(10);
+
+    // if(it == mp.end()) {
+    //     cout << "Not found! Try with another key" << '\n';
+    // }else{
+    //     mp.erase(it);
+    //     // cout << "Found it!" << " " << it->first << " -> " << it->second << '\n';
+    // }
+
+    // for(auto[key, value] : mp) {
+    //     cout << key << " -> " << value << '\n';
+    // }
+
+    // auto it = mp.lower_bound(10);
+    auto it = mp.upper_bound(10);
+
+    cout << it->first << " " << it->second << '\n';
     
     return 0;
 }
