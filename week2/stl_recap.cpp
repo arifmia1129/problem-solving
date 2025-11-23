@@ -51,44 +51,69 @@ int main () {
     //     cout << x << " " << y << " " << z << "\n";
     // }
 
-    vector<int> v;
+    // vector<int> v;
 
-    int n; cin >> n;
+    // int n; cin >> n;
 
-    for(int i = 0; i < n; i++) {
-        int x; cin >> x;
-        v.push_back(x);
-    }
+    // for(int i = 0; i < n; i++) {
+    //     int x; cin >> x;
+    //     v.push_back(x);
+    // }
 
-    v.pop_back();
+    // v.pop_back();
 
-    for(int i = 0; i < v.size(); i++) {
-        cout << v[i] << "\n";
-    }
+    // for(int i = 0; i < v.size(); i++) {
+    //     cout << v[i] << "\n";
+    // }
 
-    cout << "Front -> " << " " << v.front() << "\n";
-    cout << "Back -> " << " " << v.back() << "\n";
+    // cout << "Front -> " << " " << v.front() << "\n";
+    // cout << "Back -> " << " " << v.back() << "\n";
 
     // v.clear();
 
-    cout << "Is empty -> " << v.empty() << "\n";
+    // cout << "Is empty -> " << v.empty() << "\n";
 
     // reverse(v.begin(), v.end());
     // sort(v.begin(), v.end(), greater<int>());
 
-    auto mn = min_element(v.begin(), v.end());
-    auto mx = max_element(v.begin(), v.end());
+    // auto mn = min_element(v.begin(), v.end());
+    // auto mx = max_element(v.begin(), v.end());
 
-    cout << "Min: " << *mn << " " << "Max: " << *mx << endl;
+    // cout << "Min: " << *mn << " " << "Max: " << *mx << endl;
 
-    auto idx = mx - v.begin();
+    // auto idx = mx - v.begin();
 
-    cout << "Max element position: " << idx << endl;
+    // cout << "Max element position: " << idx << endl;
 
-    for(auto it = v.begin(); it != v.end(); it++) {
-        cout << *it << " ";
+    // for(auto it = v.begin(); it != v.end(); it++) {
+    //     cout << *it << " ";
+    // }
+    // cout << "\n";
+
+    int n; cin >> n;
+
+    deque<int> dq(n);
+
+    for(int i = 0; i < n; i++) {
+        cin >> dq[i];
     }
-    cout << "\n";
+
+    dq.push_front(1);
+    dq.push_front(9);
+
+    for(int i = 0; i < n; i++) {
+        cout << dq[i] << " ";
+    }
+
+    cout << '\n';
+
+    dq.pop_front();
+
+    for(int i = 0; i < n; i++) {
+        cout << dq[i] << " ";
+    }
+
+    cout << '\n';
     
     return 0;
 }
