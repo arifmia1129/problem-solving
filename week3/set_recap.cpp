@@ -6,21 +6,21 @@ int main () {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
-    int n; cin >> n;
+    // int n; cin >> n;
 
-    set<int> s;
+    // set<int> s;
 
-    for(int i = 0; i < n; i++) {
-        int x; cin >> x;
+    // for(int i = 0; i < n; i++) {
+    //     int x; cin >> x;
 
-        s.insert(x);
-    }
+    //     s.insert(x);
+    // }
 
-    for(auto value : s) {
-        cout << value << " ";
-    }
+    // for(auto value : s) {
+    //     cout << value << " ";
+    // }
 
-    cout << "\n";
+    // cout << "\n";
 
     // int val = 29;
 
@@ -51,17 +51,32 @@ int main () {
     // }
 
     // upper bound
-    int N; cin >> N;
+    // int N; cin >> N;
 
-    cout << N << endl;
+    // cout << N << endl;
 
-    auto it = s.upper_bound(N);
+    // auto it = s.upper_bound(N);
 
-    if(it != s.end()) {
-        cout << *it << "\n";
-    }else{
-        cout << "END\n";
+    // if(it != s.end()) {
+    //     cout << *it << "\n";
+    // }else{
+    //     cout << "END\n";
+    // }
+
+    multiset<int> ml;
+
+    int n; cin >> n;
+
+    for(int i = 0; i < n; i++) {
+        int x; cin >> x;
+
+        ml.insert(x);
     }
+
+    for(auto value : ml) {
+        cout << value << " ";
+    }
+    cout << "\n";
     
     return 0;
 }
