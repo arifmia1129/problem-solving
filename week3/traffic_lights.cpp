@@ -24,9 +24,22 @@ int main () {
 
         auto it = lights.upper_bound(p);
         int right = *it;
+
         it--;
 
+        int left = *it;
+
+        distances.erase(distances.find(right - left));
+
+        distances.insert(right - p);
+        distances.insert(p - left);
+
+        lights.insert(p);
+
+        cout << *distances.rbegin() << " ";
     }
+
+    cout << "\n";
     
     return 0;
 }
