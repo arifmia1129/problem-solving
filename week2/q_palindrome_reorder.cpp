@@ -6,56 +6,41 @@ int main () {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
-    string s; cin >> s;
+    map<char, int> mp;
 
-   if(s.size() == 1) {
-    cout << s << '\n';
-   }else {
-     map<char, int> mp;
+    string s; cin >> s;
 
     for(int i = 0; i < s.size(); i++) {
         mp[s[i]]++;
     }
 
-    bool notPossible = false;
-    int justOneCount = 0;
+    string ans;
+    int num_of_odd = 0;
+    char ch = 0;
 
-    deque<char> dq;
-
-    for(auto[ch, cnt]:mp) {
-        if(cnt == 1) {
-           dq.push_back(ch);
-            justOneCount++;
-        };
-
-        if(cnt > 1 && cnt % 2 != 0) {
-            notPossible = true;
-            break;
+    for(auto[F, S]:mp) {
+        if(S%2 != 0) {
+            num_of_odd++;
+            ch = F;
         }
 
-        if(cnt % 2 == 0) {
-            bool rightSide = true;
-            while(cnt--) {
-                if(rightSide) {
-                    dq.push_back(ch);
-                }else {
-                    dq.push_front(ch);
-                }
-
-                rightSide = !rightSide;
-            }
+        for(int i = 0; i < S/2; i++) {
+            ans.push_back(F);
         }
     }
 
-    if(notPossible || justOneCount > 1) {
-        cout << "NO SOLUTION" << '\n';
-    }else{
-        for(char ch : dq) {
-            cout << ch;
-        }
-        cout << '\n';
+    if(num_of_odd == 0) {
+        cout << ans;
+        reverse(ans.begin(), ans.end());
+        cout << ans;
+    }else if(num_of_odd == 1) {
+        cout << ans << ch;
+        reverse(ans.begin(), ans.end());
+        cout << ans;
+    }else {
+        cout << "NO SOLUTION";
     }
-   }
+    
     
     return 0;
 }
